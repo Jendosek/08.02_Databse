@@ -3,7 +3,6 @@ go
 use HospitalDB;
 go
 
--- Таблиця Відділення (Departments)
 create table Departments
 (
     ID int primary key identity(1,1),
@@ -13,7 +12,6 @@ create table Departments
 );
 go
 
--- Таблиця Захворювання (Diseases)
 create table Diseases
 (
     ID int primary key identity(1,1),
@@ -22,7 +20,6 @@ create table Diseases
 );
 go
 
--- Таблиця Лікарі (Doctors)
 create table Doctors
 (
     ID int primary key identity(1,1),
@@ -33,7 +30,6 @@ create table Doctors
 );
 go
 
--- Таблиця Обстеження (Examinations)
 create table Examinations
 (
     ID int primary key identity(1,1),
@@ -45,7 +41,6 @@ create table Examinations
 );
 go
 
--- Додавання даних до таблиць
 insert into Departments (Building, Financing, Name) values
 (1, 100000, 'Cardiology'),
 (2, 150000, 'Neurology'),
@@ -78,7 +73,6 @@ insert into Examinations (DayOfWeek, EndTime, Name, StartTime) values
 (5, '14:00', 'Ultrasound', '13:00');
 go
 
--- Вибірка даних з таблиць
 select * from Departments;
 go
 select * from Diseases;
@@ -88,7 +82,6 @@ go
 select * from Examinations;
 go
 
--- Видалення таблиць та бази даних
 drop table Examinations;
 drop table Doctors;
 drop table Diseases;
